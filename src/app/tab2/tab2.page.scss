@@ -1,60 +1,59 @@
 ion-content {
-    --background: black;
-    color: white;
-    padding-bottom: 80px;
-  }
-  
-  /* Estilo de las tarjetas */
-  ion-card {
-    background: #222;
-    text-align: center;
-    border-radius: 10px;
-    padding: 15px;
-  }
-  
-  ion-card-content h3 {
-    font-size: 1.3em;
-    font-weight: bold;
-    color: yellow;
-  }
-  
-  /* Input del formulario */
-  ion-input {
-    background: #333;
-    border-radius: 5px;
-    padding: 10px;
-    color: white;
-  }
-  
-  /* Botón de Crear */
-  ion-button {
-    margin-top: 10px;
-  }
-  
-  /* Botón FAB */
-  ion-fab-button {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  /* Barra inferior */
-  .bottom-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: #222;
-  }
-  
-  .play-btn {
-    font-size: 2.5rem;
-    color: white;
-  }
-  
-  .friends-btn {
-    font-size: 2rem;
-    color: white;
-  }
-  
+  --background: black;
+  color: white;
+  padding-bottom: 80px;
+}
+
+/* Estilo de las tarjetas */
+ion-card {
+  background: #222;
+  text-align: center;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+ion-card-content h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Input del formulario */
+ion-input {
+  background: #333;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+/* Botón de Crear */
+ion-button {
+  margin-top: 10px;
+}
+
+/* Botón FAB */
+ion-fab-button {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Barra inferior */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #222;
+}
+
+.play-btn {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.friends-btn {
+  font-size: 2rem;
+  color: white;
+}
