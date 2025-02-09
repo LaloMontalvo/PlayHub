@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>CREAR PARTIDA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <!-- Formulario para crear partida -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content>
+            <h3>Formulario</h3>
+            <ion-input placeholder="Nombre de la partida"></ion-input>
+            <ion-button expand="full" color="success">Crear</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <!-- Lista de partidas creadas -->
+      <ion-col size="6">
+        <ion-card>
+          <ion-card-content>
+            <h3>Partidas creadas</h3>
+            <ion-list>
+              <ion-item>
+                <ion-label>Partida 1 - En curso</ion-label>
+                <ion-button fill="outline">Unirse</ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-label>Partida 2 - Pendiente</ion-label>
+                <ion-button fill="outline">Unirse</ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón de agregar partida -->
+  <ion-fab vertical="top" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- Barra inferior -->
+  <div class="bottom-bar">
+    <ion-button fill="clear">
+      <ion-icon name="play" class="play-btn"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear">
+      <ion-icon name="people" class="friends-btn"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
