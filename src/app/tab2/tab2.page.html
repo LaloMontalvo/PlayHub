@@ -1,8 +1,12 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title text-center>CREAR PARTIDA</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
   <ion-grid>
@@ -13,6 +17,9 @@
           <ion-card-content>
             <h3>Formulario</h3>
             <ion-input placeholder="Nombre de la partida" [(ngModel)]="nombrePartida"></ion-input>
+            <ion-input placeholder="Juego" [(ngModel)]="juego"></ion-input>
+            <ion-input type="number" placeholder="Número de participantes" [(ngModel)]="participantes"></ion-input>
+            <ion-datetime display-format="DD/MM/YYYY HH:mm" placeholder="Hora de inicio" [(ngModel)]="horaInicio"></ion-datetime>
             <ion-button expand="full" color="success" (click)="crearPartida()">Crear</ion-button>
           </ion-card-content>
         </ion-card>
@@ -24,9 +31,26 @@
           <ion-card-content>
             <h3>Partidas creadas</h3>
             <ion-list>
-              <ion-item *ngFor="let partida of partidasCreadas">
-                <ion-label>{{ partida.nombre }} - {{ partida.estado }}</ion-label>
-                <ion-button fill="outline" (click)="unirseAPartida(partida)">Unirse</ion-button>
+              <ion-item *ngFor="let partida of partidasCreadas; let i = index">
+                <ion-label>
+                  <strong>{{ partida.nombre }}</strong> - {{ partida.estado }}<br>
+                  🎮 <strong>Juego:</strong> {{ partida.juego }}<br>
+                  👥 <strong>Participantes:</strong> {{ partida.participantes }}<br>
+                  ⏰ <strong>Hora de inicio:</strong> {{ partida.horaInicio }}
+                </ion-label>
+
+                <ion-button fill="outline" color="primary" (click)="unirseAPartida(partida)">
+                  Unirse
+                </ion-button>
+
+                <ion-button fill="outline" color="warning" (click)="finalizarPartida(partida)">
+                  Finalizar
+                </ion-button>
+
+                <ion-button fill="outline" color="danger" (click)="eliminarPartida(i)">
+                  Eliminar
+                </ion-button>
+
               </ion-item>
             </ion-list>
           </ion-card-content>
@@ -34,21 +58,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
-  <!-- Botón de agregar partida -->
-  <ion-fab vertical="top" horizontal="start">
-    <ion-fab-button>
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-  <!-- Barra inferior -->
-  <div class="bottom-bar">
-    <ion-button fill="clear">
-      <ion-icon name="play" class="play-btn"></ion-icon>
-    </ion-button>
-    <ion-button fill="clear">
-      <ion-icon name="people" class="friends-btn"></ion-icon>
-    </ion-button>
-  </div>
 </ion-content>

@@ -1,5 +1,4 @@
 ion-content {
-    --background: black;
     color: white;
     padding-bottom: 100px; 
   }
@@ -36,5 +35,50 @@ ion-content {
     object-fit: cover;
   }
 
-// commit//
+/* ANIMACIÓN DE ENTRADA PARA CADA CATEGORÍA */
+.animated-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+/* ANIMACIÓN POR HOVER */
+ion-card {
+  transition: transform 0.3s ease-in-out;
+}
+ion-card:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN DEL BOTÓN FLOTANTE */
+.animated-fab {
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* ANIMACIONES KEYFRAMES */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
   

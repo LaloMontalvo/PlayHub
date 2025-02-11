@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>JUEGOS DE ACCIÓN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="hero">
+    <img src="https://as01.epimg.net/meristation/imagenes/2021/11/26/reportajes/1637951010_581176_1637951477_noticia_normal.jpg" />
+  </div>
+  
+  <div class="game-container">
+    <ion-card>
+      <img src="https://cdn1.epicgames.com/spt-assets/ca9ef1bcf2f54043baac351366aec677/black-myth-wukong-1l4n1.png" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>Black Myth: Wukong</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://gamingbolt.com/wp-content/uploads/2021/09/God-of-War-Ragnarok-image.jpg" alt="Juego 2">
+      <ion-card-header>
+        <ion-card-title>God of War: Ragnarok</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://gamebrott.com/wp-content/uploads/2025/02/spider-man-2-blog-1697207041401-1024x576.jpg" alt="Juego 3">
+      <ion-card-header>
+        <ion-card-title>Marvel's Spider-Man 2</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP.H2HeXJUQDEY1-5Ln6k8UsAHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Grand Theft Auto V </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://wp-uploads.qualbert.com/2023/03/Resident-Evil-4-Remake-Wallpaper-1170x720.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Resident Evil 4 Remake</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://images.hdqwalls.com/download/final-fantasy-vii-remake-and-rebirth-r4-1920x1080.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Final Fantasy VII Rebirth</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://www.gamespot.com/a/uploads/screen_kubrick/1701/17013431/4217627-gssilenthill2preorder.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Silent Hill 2 Remake</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://th.bing.com/th/id/R.dff05e8363038b94484e085eadebe1e4?rik=1E7XruHdmT9QeQ&pid=ImgRaw&r=0" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Ninja Gaiden 2 Black</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+.hero {
+  width: 100%;
+  height: 90%px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+ion-card {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+ion-card:hover {
+  transform: scale(1.05);
+}
+</style>

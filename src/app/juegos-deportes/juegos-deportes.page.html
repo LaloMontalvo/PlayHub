@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>JUEGOS DE DEPORTES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="hero">
+    <img src="https://www.winp.es/wp-content/uploads/2023/01/Videojuegos-de-deporte-mas-populares.png" />
+  </div>
+  
+  <div class="game-container">
+    <ion-card>
+      <img src="https://th.bing.com/th/id/R.27d9f59aff9f14d94146a2e21bd45b91?rik=qVcewZT2VO52aA&pid=ImgRaw&r=0" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>Forza Horizon 5</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://www.xboxdynasty.de/wp-content/uploads/2020/09/riders-republic-12.jpg" alt="Juego 2">
+      <ion-card-header>
+        <ion-card-title>Riders Republic</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP.qEB3WZ0AVZ6x3c5T-X9FQAHaEK?rs=1&pid=ImgDetMain" alt="Juego 3">
+      <ion-card-header>
+        <ion-card-title>Madden NFL 22</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP.R5tCnzsNlXnZA1nYbP3iagHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>FIFA 22</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://i.ytimg.com/vi/L1H-F3VQOqE/maxresdefault.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Parkour Tag</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://bunnygaming.com/wp-content/uploads/2022/10/Dave-the-diver-wallpaper.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Dave the Diver</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP.AEIXsVZBnXCKbAzkDPh06QHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Like a Dragon: Infinite Wealth</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP._wZaX33gQxPDq9-3E0MJFgHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Horizon 2: Forbbiden West</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+.hero {
+  width: 100%;
+  height: 90%px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+ion-card {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+ion-card:hover {
+  transform: scale(1.05);
+}
+</style>

@@ -1,0 +1,131 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>JUEGOS DE AVENTURA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="hero">
+    <img src="https://wotpack.ru/wp-content/uploads/2020/11/MyCollages-13-800x566.jpg" />
+  </div>
+  
+  <div class="game-container">
+    <ion-card>
+      <img src="https://i0.wp.com/mynintendonews.com/wp-content/uploads/2020/12/the_house_in_fata_morgana.jpg?fit=1280%2C720&ssl=1" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>The House in Fata Morgana </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://static.pressakey.de/gfxtrailer/s/Animal-Well-Gameplay-Trailer-43967-1676105808.jpg" alt="Juego 2">
+      <ion-card-header>
+        <ion-card-title>	
+          Animal Well</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://generacionxbox.com/wp-content/uploads/2023/01/dead-space-remake-scores.jpg" alt="Juego 3">
+      <ion-card-header>
+        <ion-card-title>	
+          Dead Space Remake</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    
+    <ion-card>
+      <img src="https://th.bing.com/th/id/R.1eff9176dbf3ed54cbe38444b7d2486f?rik=AbvSc2IJbwlC4w&pid=ImgRaw&r=0" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>	
+          Monster Hunter Rise</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://static1.thegamerimages.com/wordpress/wp-content/uploads/2020/02/Mission-Its-complicated-Header.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Mission: It's Complicated</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://bunnygaming.com/wp-content/uploads/2022/10/Dave-the-diver-wallpaper.jpg" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Dave the Diver</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP.AEIXsVZBnXCKbAzkDPh06QHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Like a Dragon: Infinite Wealth</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://th.bing.com/th/id/OIP._wZaX33gQxPDq9-3E0MJFgHaEK?rs=1&pid=ImgDetMain" alt="Juego 4">
+      <ion-card-header>
+        <ion-card-title>Horizon 2: Forbbiden West</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<style>
+.hero {
+  width: 100%;
+  height: 90%px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+ion-card {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+ion-card:hover {
+  transform: scale(1.05);
+}
+</style>
