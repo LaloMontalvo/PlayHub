@@ -12,12 +12,18 @@ export class Tab2Page {
   participantes: number | null = null;
   horaInicio: string = '';
   partidasCreadas: Array<{ 
+    codigo: string;
     nombre: string; 
     juego: string;
     participantes: number;
     horaInicio: string;
     estado: string; 
   }> = [];
+  partidaSeleccionada: any = null;
+
+  generarCodigoPartida(): string {
+    return Math.floor(10000000 + Math.random() * 90000000).toString();
+  }
 
   crearPartida() {
     if (this.nombrePartida.trim() && this.juego.trim() && this.participantes && this.horaInicio) {
@@ -27,6 +33,7 @@ export class Tab2Page {
 
       if (!existe) {
         this.partidasCreadas.push({
+          codigo: this.generarCodigoPartida(),
           nombre: this.nombrePartida,
           juego: this.juego,
           participantes: this.participantes,
@@ -34,7 +41,6 @@ export class Tab2Page {
           estado: 'Pendiente',
         });
 
-        // Limpiar formulario después de crear la partida
         this.nombrePartida = '';
         this.juego = '';
         this.participantes = null;
@@ -47,10 +53,15 @@ export class Tab2Page {
     }
   }
 
-  unirseAPartida(partida: { nombre: string; estado: string }) {
-    if (partida.estado === 'Pendiente') {
-      partida.estado = 'En curso';
-      console.log(`Unido a la partida: ${partida.nombre}`);
+  unirseAPartida() {
+    if (!this.partidaSeleccionada) {
+      alert('Por favor, selecciona una partida antes de unirte.');
+      return;
+    }
+
+    if (this.partidaSeleccionada.estado === 'Pendiente') {
+      this.partidaSeleccionada.estado = 'En curso';
+      console.log(`Unido a la partida: ${this.partidaSeleccionada.nombre}`);
     } else {
       alert('La partida ya está en curso o finalizada');
     }

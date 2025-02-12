@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header> 
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -7,12 +7,11 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
   <ion-grid>
     <ion-row>
       <!-- Formulario para crear partida -->
-      <ion-col size="6">
+      <ion-col size="12" size-md="6">
         <ion-card>
           <ion-card-content>
             <h3>Formulario</h3>
@@ -26,7 +25,7 @@
       </ion-col>
 
       <!-- Lista de partidas creadas -->
-      <ion-col size="6">
+      <ion-col size="12" size-md="6">
         <ion-card>
           <ion-card-content>
             <h3>Partidas creadas</h3>
@@ -38,24 +37,70 @@
                   👥 <strong>Participantes:</strong> {{ partida.participantes }}<br>
                   ⏰ <strong>Hora de inicio:</strong> {{ partida.horaInicio }}
                 </ion-label>
-
-                <ion-button fill="outline" color="primary" (click)="unirseAPartida(partida)">
-                  Unirse
-                </ion-button>
-
-                <ion-button fill="outline" color="warning" (click)="finalizarPartida(partida)">
-                  Finalizar
-                </ion-button>
-
-                <ion-button fill="outline" color="danger" (click)="eliminarPartida(i)">
-                  Eliminar
-                </ion-button>
-
+                <div class="button-group">
+                  <ion-button fill="outline" color="warning" (click)="finalizarPartida(partida)">
+                    Finalizar
+                  </ion-button>
+                  <ion-button fill="outline" color="danger" (click)="eliminarPartida(i)">
+                    Eliminar
+                  </ion-button>
+                </div>
               </ion-item>
             </ion-list>
+          </ion-card-content>
+        </ion-card>
+
+        <!-- Sección para Unirse a una Partida -->
+        <ion-card>
+          <ion-card-content>
+            <h3>Unirse a una Partida</h3>
+            <ion-item>
+              <ion-label>Selecciona una partida:</ion-label>
+              <ion-select [(ngModel)]="partidaSeleccionada">
+                <ion-select-option *ngFor="let partida of partidasCreadas" [value]="partida">
+                  {{ partida.nombre }} - Estado: {{ partida.estado }}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-button expand="full" color="primary" (click)="unirseAPartida()">
+              Unirse
+            </ion-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+
+<style>
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .button-group {
+      flex-direction: row;
+    }
+  }
+
+  ion-card {
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  ion-card:hover {
+    transform: scale(1.03);
+  }
+
+  ion-card-content h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  ion-input, ion-datetime, ion-select {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+</style>

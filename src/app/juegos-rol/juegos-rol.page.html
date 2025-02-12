@@ -1,13 +1,87 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>juegosRol</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>JUEGOS DE TERROR</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">juegosRol</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content>
+  <div class="hero">
+    <img src="https://th.bing.com/th/id/R.b746fc6e01601acb70ff80f0de73b5c1?rik=mgmn52Yhx1g6jg&pid=ImgRaw&r=0" />
+  </div>
+  
+  <div class="game-container">
+    <ion-card>
+      <img src="https://i.ytimg.com/vi/-SCvR9KUsos/maxresdefault.jpg" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>MADiSON</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://media.nichegamer.com/wp-content/uploads/2023/08/killing-floor-3-08-22-23-1-scaled.jpg" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>Killing Floor 3</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2020/03/manhunt-3-1901473.jpg?tf=3840x" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>Manhunt</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <img src="https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/05/five-nights-at-freddys-poster-cut.png" alt="Juego 1">
+      <ion-card-header>
+        <ion-card-title>five nights at freddy's</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full" color="primary">Jugar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
+
+<style>
+.hero {
+  width: 100%;
+  height: 90%px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+ion-card {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+ion-card:hover {
+  transform: scale(1.05);
+}
+</style>
